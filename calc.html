@@ -11,17 +11,28 @@
         box-sizing: border-box;
     }
     @font-face {
-        font-family: "Raleway";
+        font-family: "Raleway-Regular";
         src: url("Raleway_woff/Raleway-Regular.woff2") format('woff2'),
             url("Raleway_woff/Raleway-Regular.woff") format('woff');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
+        font-weight:normal;
+        font-style:normal; 
+    }
+    @font-face {
+        font-family: "Raleway-Medium";
+        src: url("Raleway_woff/Raleway-Medium.woff2") format('woff2'),
+            url("Raleway_woff/Raleway-Medium.woff") format('woff');
+        font-weight:normal;
+        font-style:normal; 
+    }
+    @font-face {
+        font-family: "Raleway-SemiBold";
+        src: url("Raleway_woff/Raleway-SemiBold.woff2") format('woff2'),
+            url("Raleway_woff/Raleway-SemiBold.woff") format('woff');
+        font-weight:normal;
+        font-style:normal; 
     }
     body {
         margin: 0;
-        font-family:"Raleway";
-        /* font-family:""; */
         font-weight:normal;
     }
     .container {
@@ -42,13 +53,14 @@
         color:#626262;
     }
     #gradeForm {
+        font-family:"Raleway-Regular";
         display: flex; 
         flex-wrap: wrap; 
         justify-content: space-between;
         font-size:12px;
         /* border: solid 1px black; */
         color:#626262;
-        font-weight:400;
+        font-weight:normal;
         letter-spacing:1px;
     }
     #gradeForm > div { 
@@ -85,8 +97,8 @@
     }
     .btn { 
         width: 60px; 
-        font-family:"Raleway";
-        font-weight:400;
+        font-family:"Raleway-Regular";
+        font-weight:normal;
         font-size:8px;
         letter-spacing:2px;
         border-radius:0px;
@@ -109,8 +121,8 @@
     }
     .btn-xs {
         width: 60px; 
-        font-family:"Raleway";
-        font-weight:400;
+        font-family:"Raleway-Regular";
+        font-weight:normal;
         font-size:8px;
         letter-spacing:2px;
         border-radius:0px;
@@ -153,7 +165,7 @@
     }
     #subUpdateBtn {
         width:60px; 
-        font-family:"Raleway";
+        font-family:"Raleway-Regular";
         font-weight:normal;
         font-size:8px;
         margin-right:10px;
@@ -171,7 +183,7 @@
     }
     #updateCancleBtn {
         width:60px; 
-        font-family:"Raleway";
+        font-family:"Raleway-Regular";
         font-weight:normal;
         font-size:8px;
         margin-right:10px;
@@ -217,7 +229,8 @@
         width:150px;
     }
     header #menu {
-        font-weight:450;
+        font-family:"Raleway-Medium";
+        font-weight:normal;
         font-size:12px;
         letter-spacing: 1px;
     }
@@ -273,14 +286,16 @@
         margin:10px 0 10px 0;
     }
     h3 {
-        font-weight:600;
+        font-family:"Raleway-SemiBold";
+        font-weight:normal;
         font-family:"Raleway";
         letter-spacing:2px;
         color:#626262;
         padding:30px 0 20px 0;
     }
     thead > tr > th {
-        font-weight:500;
+        font-family:"Raleway-Medium";
+        font-weight:normal;
         font-size: 13px;
         color:#626262;
         letter-spacing:1px;
