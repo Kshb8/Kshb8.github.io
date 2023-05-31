@@ -143,13 +143,13 @@
         border:solid 1px black;
         color:black;
     }
-    a {
+    li {
         text-decoration:none;  
         color:#626262;
         position: relative;
         padding-bottom:10px;
     }
-    a::after {
+    li::after {
         content: '';
         position:absolute;
         width: 100%;
@@ -161,11 +161,11 @@
         transform-origin: bottom left right;
         transition: 0.8s ease-in-out;
     }
-    a:hover {
+    li:hover {
         color:#818b98;
         transition: 0.5s;
     }
-    a:hover::after {
+    li:hover::after {
         transform: scaleX(1);
         transform-origin: bottom right left;
     }
