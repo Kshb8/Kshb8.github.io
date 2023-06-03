@@ -9,13 +9,32 @@
 </head>
 <style>
     * {
-    box-sizing: border-box;
+        box-sizing: border-box;
+    }
+        @font-face {
+        font-family: "Raleway-Regular";
+        src: url("Raleway_woff/Raleway-Regular.woff2") format('woff2'),
+            url("Raleway_woff/Raleway-Regular.woff") format('woff');
+        font-weight:normal;
+        font-style:normal; 
+    }
+    @font-face {
+        font-family: "Raleway-Medium";
+        src: url("Raleway_woff/Raleway-Medium.woff2") format('woff2'),
+            url("Raleway_woff/Raleway-Medium.woff") format('woff');
+        font-weight:normal;
+        font-style:normal; 
+    }
+    @font-face {
+        font-family: "Raleway-SemiBold";
+        src: url("Raleway_woff/Raleway-SemiBold.woff2") format('woff2'),
+            url("Raleway_woff/Raleway-SemiBold.woff") format('woff');
+        font-weight:normal;
+        font-style:normal; 
     }
     body {
         margin: 0;
         padding:0;
-        font-family:"Raleway";
-        /* font-family:""; */
         font-weight:normal;
         background:white;
     }
@@ -47,20 +66,28 @@
         width:150px;
     }
     header #menu {
-        font-weight:550;
+        font-family:"Raleway-Medium";
+        font-weight:normal;
         font-size:12px;
+        letter-spacing: 1px;
     }
     header #menu li {
         display:inline;
         margin-left: 80px; 
     }
     a {
+        text-decoration:none;
+    }
+    a, a:visited, a:hover, a:active {
+        color: inherit;
+    }
+    li {
         text-decoration:none;  
         color:white;
         position: relative;
         padding-bottom:10px;
     }
-    a::after {
+    li::after {
         content: '';
         position:absolute;
         width: 100%;
@@ -72,7 +99,7 @@
         transform-origin: bottom left right;
         transition: 0.8s ease-in-out;
     }
-    a:hover {
+    li:hover {
         color:#DCE2EC;
         transition: 0.5s;
     }
@@ -87,12 +114,12 @@
     }
     h1 {
         /* border:solid red 1px; */
+        font-family:"Raleway-Bold";
         float:right;
-        font-weight:700;
+        font-weight:normal;
         font-size:50px;
         text-align:center;
         width:800px;
-        font-family:"Raleway";
         letter-spacing:3px;
     }
     p {
@@ -102,8 +129,8 @@
         text-align:center;
         font-size:18px;
         line-height:30px;
-        font-weight:400;
-        font-family:"Raleway";
+        font-weight:normal;
+        font-family:"Raleway-Regular";
         color:white;
         letter-spacing:1px;
     }
@@ -120,8 +147,8 @@
         border-radius:0px;
         background:white;
         border-width: 1px;
-        font-family:"Raleway";
-        font-weight:bold;
+        font-family:"Raleway-Bold";
+        font-weight:normal;
         color:#6B7A97;
         letter-spacing:1px;
         height:55px;
