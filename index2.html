@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classique - Home</title>
+    <link rel="icon" type="image/png" href="icon.png"/>
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        padding:0;
+        font-family:"Raleway";
+        /* font-family:""; */
+        font-weight:normal;
+        background:white;
+    }
+    .top {
+        height: 80px;
+        /* border:solid 1px red; */
+        box-shadow:0px 5px 30px rgb(0 0 0 / 5%);
+        position:fixed;
+        top:0;
+        z-index:3;
+        width:100%;
+        background:linear-gradient(90deg, white 18%, #6B7A97 18%); 
+    }
+    .top #menu {
+        float: right;
+        width: 800px;  
+        margin-top:15px;
+        height:50px;
+        /* border:solid 1px blue;  */
+    }
+    #menu {
+        width:980px;
+        padding:15px 0 0 0;
+    }
+    header #logo {
+        /* border:solid 1px blue; */
+        float:left;
+        margin:10px 0 0 55px;
+        width:150px;
+    }
+    header #menu {
+        font-weight:550;
+        font-size:12px;
+    }
+    header #menu li {
+        display:inline;
+        margin-left: 80px; 
+    }
+    a {
+        text-decoration:none;  
+        color:white;
+        position: relative;
+        padding-bottom:10px;
+    }
+    a::after {
+        content: '';
+        position:absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        transform-origin: bottom left right;
+        transition: 0.8s ease-in-out;
+    }
+    a:hover {
+        color:#DCE2EC;
+        transition: 0.5s;
+    }
+    .float-right {
+        float: right;
+    }
+    #img {
+        width:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1 {
+        /* border:solid red 1px; */
+        float:right;
+        font-weight:700;
+        font-size:50px;
+        text-align:center;
+        width:800px;
+        font-family:"Raleway";
+        letter-spacing:3px;
+    }
+    p {
+        width:800px;
+        /* border:solid 1px black; */
+        margin-top:0px;
+        text-align:center;
+        font-size:18px;
+        line-height:30px;
+        font-weight:400;
+        font-family:"Raleway";
+        color:white;
+        letter-spacing:1px;
+    }
+    #info {
+        margin-bottom:10px;
+    }
+    #btncontrol {
+        width:600px;
+        color:#626262;
+    }
+    #startBtn {
+        width:220px;
+        font-size:16px;
+        border-radius:0px;
+        background:white;
+        border-width: 1px;
+        font-family:"Raleway";
+        font-weight:bold;
+        color:#6B7A97;
+        letter-spacing:1px;
+        height:55px;
+        border:solid 1px white;
+        border-radius:100px;
+    }
+    #startBtn:hover {
+        background-color:#6B7A97;
+        transition: 0.4s ease-in-out;
+        border:solid 1px #6B7A97;
+        color:white;
+    }
+    .part1 {
+        /* border:solid 1px red; */
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .part2 {
+        /* border:solid 1px red; */
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .part3 {
+        /* border:solid 1px red; */
+        position: absolute;
+        top: 66%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .first {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    aside#left {
+        width:33.33%;
+        height:350px; 
+        float:left; 
+        text-align:center;
+        color:#6B7A97;
+        background:white;
+    }
+    aside#right {
+        width:33.33%;
+        height:350px;
+        float:left;
+        color:#6B7A97;
+        text-align:center;
+        background:white;
+    }
+    .second main {
+        width:33.33%;
+        height:350px;
+        float:left;
+        color:#6B7A97;
+        text-align:center;
+        background:white;
+    }
+    .icon {
+        width:60px;
+        margin-top:70px;
+    }
+    .subT {
+        font-size:20px;
+        margin-top:10px;
+        font-weight:700;
+        letter-spacing:1px;
+    }
+    .cont {
+        margin-top:20px;
+        /* border:solid 1px blue; */
+        width:70%;
+        margin-left:15%;
+        color:#616161;
+        letter-spacing:1px;
+        line-height:30px;
+    }
+    .second {
+        height:350px;
+        margin-bottom:90px;
+        /* border:solid 3px blue; */
+    }
+    .third {
+        /* border:solid 6px purple; */
+        width:100%;
+        height:1050px;
+        background-color:#DCE2EC;
+        padding:5% 0 8% 0;
+    }
+    .expT {
+        font-size:60px;
+        font-weight:700;
+        letter-spacing: 1px;
+        color:#616161;
+        text-align: center;
+        /* border:solid 1px blue; */
+    }
+    .expS1 {
+        position: absolute;
+        font-size:40px;
+        font-weight:700;
+        letter-spacing: 1px;
+        color:#616161;
+        text-align:left;
+        float:right;
+        margin:7% 0 0 51.5%;
+        /* border:solid 1px green; */
+    }
+    .exp1 {
+        letter-spacing: 1px;
+        color:#616161;
+        text-align:left;
+        float:right;
+        width:22.5%;
+        line-height:30px;
+        /* border:solid 1px yellow; */
+        margin:11% 0 0 51.5%;
+        position:absolute;
+    }
+    #js {
+        width:23.5%;
+        float:left;
+        margin:5% 0 0 25%;
+        position:relative;
+    }
+    .expS2 {
+        position: absolute;
+        font-size:40px;
+        font-weight:700;
+        letter-spacing: 1px;
+        color:#616161;
+        text-align:left;
+        float:right;
+        margin:35% 0 0 25%;
+    }
+    .exp2 {
+        letter-spacing: 1px;
+        color:#616161;
+        text-align:left;
+        float:left;
+        width:22.5%;
+        line-height:30px;
+        /* border:solid 1px yellow; */
+        margin:39% 0 0 25%;
+        position:absolute;
+    }
+    #calc {
+        width:26%;
+        float:right;
+        margin:30% 26.5% 0 0;
+        position:absolute;
+    }
+    .fourth {
+        position: relative;
+        text-align: center;
+        color: white;
+        /* border:solid 1px red; */
+        background:#6B7A97;
+    }
+    #fb {
+        width:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* border:solid 1px red; */
+    }
+    .fbD {
+        /* border:solid 1px red; */
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 1px;
+        width:15%;
+    }
+    .fbW {
+        /* border:solid 1px red; */
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 1px;
+        font-size:60px;
+        font-weight:bold;
+    }
+    .uL {
+        border:solid 0.5px white;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width:7%;
+        margin-top:1.5%;
+    }
+    footer {
+        background:#616161;
+        height:350px;
+        position:sticky;
+    }
+    #left2 {
+        margin:0 0 0 20%;
+        padding-top:4%;
+        width:20%;
+        height:350px; 
+        float:left; 
+        text-align:center;
+        color:white;
+    }
+    #right2 {
+        margin:0 20% 0 0;
+        padding-top:4%;
+        width:20%;
+        height:350px;
+        float:left;
+        color:white;
+        text-align:center;
+    }
+    #mid {
+        padding-top:6%;
+        width:20%;
+        height:150px;
+        float:left;
+        color:white;
+        text-align:center;
+    }
+    .info {
+        margin-top:30px;
+        border-right:solid 1px white;
+        letter-spacing:1px;
+        line-height:25px;
+    }
+    .tel {
+        letter-spacing:1px;
+        line-height:25px;
+    }
+    .add {
+        margin-top:30px;
+        border-left:solid 1px white;
+        letter-spacing:1px;
+        line-height:25px;
+    }
+    .T {
+        font-weight:600;
+        line-height:55px;
+        font-size:20px;
+    }
+</style>
+<body>
+    <div class="top">
+        <header>
+            <a href="index2.html"><img id="logo" src="logo.png"></a>
+            <ul id="menu">
+                <li><a href="calc2.html">IB GRADE CALCULATOR</a></li>
+                <li><a>CALENDAR</li></a>
+                <li><a>TASKS & DEADLINES</li></a>
+                <li><a>PROFILE</li></a>
+            </ul>
+        </header>
+    </div>
+    <div class="first">
+        <img id="img" src="background1.png">
+        <div class="part1"><h1>IB GRADE CALCULATOR<br>FOR STUDENTS</h1></div>
+        <div class="part2"><p>Meet our unique features that allows IB students to manage their grades, assignments, and deadlines more efficiently. </p></div>
+        <div class="part3"><button type="button" id="startBtn">GET STARTED</button></div>
+    </div>
+    <div class="second">
+        <aside id="left">
+            <img class="icon" src="book.png">
+            <div class="subT">
+                Our Story
+            </div>
+            <div class="cont">
+                ClasiQue is an educational tool created for IB students by IB students. We first came up with the idea to support us through our years in IB MYP as a Start Up project.
+            </div>
+        </aside>
+        <main>
+            <img class="icon" src="eye.png">
+            <div class="subT">
+                Our Vision
+            </div>
+            <div class="cont">
+                We aim to make grade calculations easier for IB students despite the complex rubrics and criterias. This is especially important as there were no other student-based tools made for IB students before ClassiQue.
+            </div>
+        </main>
+        <aside id="right">
+            <img class="icon" src="tech.png">
+            <div class="subT">
+                Technology
+            </div>
+            <div class="cont">
+                The program was made using basic HTML, CSS, and Javascript by a grade 9 student. It required lots of patience and knowledge of IB's grading standards to meet the expectations of the curriculum.
+            </div>
+        </aside>
+    </div>
+    <div class="third">
+        <div class="expT">
+            How it works
+        </div>
+        <img id="js" src="js.png">
+        <div class="expS1">
+            Program
+        </div>
+        <div class="exp1">
+            The calculator was programmed using using JavaScript. The program may seem basic and simple, but it took 700 lines of codes to make this product exist!
+        </div>
+        <img id="calc" src="calc.png">
+        <div class="expS2">
+            Calculation
+        </div>
+        <div class="exp2">
+            In order to provide more customization, we decided to allow users to only add one grade per criteria. This is because teachers have their own ways of finding the average for each strand and criterias, which isn't something that a program can predict. 
+        </div>
+    </div>
+    <div class="fourth">
+        <img id="fb" src="fb.png">
+        <div class="fbD">A Student from Grade 9</div>
+        <div class="uL"></div>
+        <div class="fbW">"Innovative tool for IB students"</div>
+    </div>
+    <footer>
+        <aside id="left2">
+            <div class="info">
+                <div class="T">Contact:</div>
+                sunhye_koo@nisc.edu.kh
+                max_wang@nisc.edu.kh
+            </div>
+        </aside>
+        <main id="mid">
+            <div class="tel">
+                <div class="T">Tel:</div>
+                123-456-7890<br><br><br><br><br>
+                © 2023 by ClassiQue
+            </div>
+        </main>
+        <aside id="right2">
+            <div class="add">
+                <div class="T">Address:</div>
+                Street 2004, Phnom Penh
+                <br>12102, Cambodia
+            </div>
+        </aside>
+    </footer>
+</body>
+</html>
