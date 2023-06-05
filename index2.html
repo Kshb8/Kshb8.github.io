@@ -9,7 +9,7 @@
 </head>
 <style>
     * {
-    box-sizing: border-box;
+        box-sizing: border-box;
     }
     @font-face {
         font-family: "Raleway-Regular";
@@ -32,24 +32,32 @@
         font-weight:normal;
         font-style:normal; 
     }
+    @font-face {
+        font-family: "Raleway-Bold";
+        src: url("Raleway_woff/Raleway-Bold.woff2") format('woff2'),
+            url("Raleway_woff/Raleway-Bold.woff") format('woff');
+        font-weight:normal;
+        font-style:normal; 
+    }
     body {
         margin: 0;
+        padding:0;
         font-weight:normal;
         background:white;
     }
     .top {
         height: 80px;
-        background:white;
         /* border:solid 1px red; */
         box-shadow:0px 5px 30px rgb(0 0 0 / 5%);
         position:fixed;
         top:0;
         z-index:3;
         width:100%;
+        background:linear-gradient(90deg, white 18%, #6B7A97 18%); 
     }
     .top #menu {
         float: right;
-        width: 800px;  
+        width: 650px;  
         margin-top:15px;
         height:50px;
         /* border:solid 1px blue;  */
@@ -61,87 +69,17 @@
     header #logo {
         /* border:solid 1px blue; */
         float:left;
-        margin:15px 0 0 100px;
+        margin:10px 0 0 55px;
         width:150px;
     }
     header #menu {
-        font-family:"Raleway-Medium";
+        font-family:"Raleway-SemiBold";
         font-weight:normal;
         font-size:12px;
-        letter-spacing: 1px;
     }
     header #menu li {
         display:inline;
-        margin-left: 50px; 
-    }
-    .float-right {
-        float: right;
-    }
-    #img {
-        margin-top:70px;
-        width:910px;
-        float:right;
-    }
-    h1 {
-        /* border:solid red 1px; */
-        font-family:"Raleway-SemiBold";
-        float:right;
-        font-weight:normal;
-        font-size:35px;
-        text-align:right;
-        width:500px;
-        letter-spacing:3px;
-    }
-    .inner {
-        position:relative;
-        /* border:solid 1px blue; */
-        height:600px;
-        width:465px;
-        float:right;
-        margin-top:100px;
-        color:#626262;
-    }
-    p {
-        width:600px;
-        /* border:solid 1px black; */
-        float:right;
-        margin-top:0px;
-        text-align:right;
-        font-size:20px;
-        line-height:30px;
-        font-weight:normal;
-        font-family:"Raleway-Regular";
-        color:#626262;
-        letter-spacing:1px;
-    }
-    
-    #info {
-        margin-bottom:10px;
-    }
-    #btncontrol {
-        width:600px;
-        color:#626262;
-    }
-    #startBtn {
-        float:right;
-        width:200px;
-        height:50px;
-        font-size:12px;
-        border-radius:0px;
-        background:#6b7a98;
-        margin-top:10px;
-        border-width: 1px;
-        font-family:"Raleway-Regular";
-        color:white;
-        letter-spacing:3px;
-        height:45px;
-        border:solid 1px #6b7a98;
-    }
-    #startBtn:hover {
-        background-color:white;
-        transition: 0.4s ease-in-out;
-        border:solid 1px black;
-        color:black;
+        margin-left: 80px; 
     }
     a {
         text-decoration:none;
@@ -151,7 +89,7 @@
     }
     li {
         text-decoration:none;  
-        color:#626262;
+        color:white;
         position: relative;
         padding-bottom:10px;
     }
@@ -168,64 +106,649 @@
         transition: 0.8s ease-in-out;
     }
     li:hover {
-        color:#818b98;
+        color:#DCE2EC;
         transition: 0.5s;
     }
-    li:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom right left;
+    .float-right {
+        float: right;
+    }
+    #img {
+        width:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1 {
+        /* border:solid red 1px; */
+        font-family:"Raleway-Bold";
+        float:right;
+        font-weight:normal;
+        font-size:50px;
+        text-align:center;
+        width:800px;
+        letter-spacing:3px;
+    }
+    p {
+        width:800px;
+        /* border:solid 1px black; */
+        margin-top:0px;
+        text-align:center;
+        font-size:18px;
+        line-height:30px;
+        font-weight:normal;
+        font-family:"Raleway-Regular";
+        color:white;
+        letter-spacing:1px;
+    }
+    #info {
+        margin-bottom:10px;
+    }
+    #btncontrol {
+        width:600px;
+        color:#626262;
+    }
+    #startBtn {
+        width:220px;
+        font-size:16px;
+        border-radius:0px;
+        background:white;
+        border-width: 1px;
+        font-family:"Raleway-Bold";
+        font-weight:normal;
+        color:#6B7A97;
+        letter-spacing:1px;
+        height:55px;
+        border:solid 1px white;
+        border-radius:100px;
+    }
+    #startBtn:hover {
+        background-color:#6B7A97;
+        transition: 0.4s ease-in-out;
+        border:solid 1px #6B7A97;
+        color:white;
     }
     .part1 {
-        position:absolute;
         /* border:solid 1px red; */
-        float:right;
-        margin:45px 0 0 65px;
-        width:500px;
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .part2 {
-        position:absolute;
         /* border:solid 1px red; */
-        margin:175px 0 0 65px;
-        width:500px;
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .part3 {
-        position:absolute;
         /* border:solid 1px red; */
-        float:right;
-        margin:285px 0 0 65px;
-        width:500px;
+        position: absolute;
+        top: 66%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    .part4 {
+    .first {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    aside#left {
+        width:33.33%;
+        height:350px; 
+        float:left; 
+        text-align:center;
+        color:#6B7A97;
+        background:white;
+    }
+    aside#right {
+        width:33.33%;
+        height:350px;
+        float:left;
+        color:#6B7A97;
+        text-align:center;
+        background:white;
+    }
+    .second main {
+        width:33.33%;
+        height:350px;
+        float:left;
+        color:#6B7A97;
+        text-align:center;
+        background:white;
+    }
+    .icon {
+        width:60px;
+        margin-top:70px;
+    }
+    .subT {
+        font-size:20px;
+        margin-top:10px;
+        font-weight:700;
+        letter-spacing:1px;
+        font-family:"Raleway-SemiBold";
+        font-weight:normal;
+    }
+    .cont {
+        margin-top:20px;
+        /* border:solid 1px blue; */
+        width:70%;
+        margin-left:15%;
+        color:#616161;
+        letter-spacing:1px;
+        line-height:30px;
+        font-family:"Raleway-Regular";
+        font-weight:normal;
+    }
+    .second {
+        height:350px;
+        margin-bottom:90px;
+        /* border:solid 3px blue; */
+    }
+    .third {
+        /* border:solid 6px purple; */
+        width:100%;
+        height:1050px;
+        background-color:#DCE2EC;
+        padding:5% 0 8% 0;
+    }
+    .expT {
+        font-family:"Raleway-SemiBold";
+        font-weight:normal;
+        font-size:60px;
+        letter-spacing: 1px;
+        color:#616161;
+        text-align: center;
+        /* border:solid 1px blue; */
+    }
+    .expS1 {
+        font-family:"Raleway-SemiBold";
+        font-weight:normal;
+        position: absolute;
+        font-size:40px;
+        letter-spacing: 1px;
+        color:#616161;
+        text-align:left;
+        float:right;
+        margin:7% 0 0 51.5%;
+        /* border:solid 1px green; */
+    }
+    .exp1 {
+        font-family:"Raleway-Regular";
+        font-weight:normal;
+        letter-spacing: 1px;
+        color:#616161;
+        text-align:left;
+        float:right;
+        width:22.5%;
+        line-height:30px;
+        /* border:solid 1px yellow; */
+        margin:11% 0 0 51.5%;
         position:absolute;
-        /* border:solid 1px red; */
+    }
+    #js {
+        width:23.5%;
+        float:left;
+        margin:5% 0 0 25%;
+        position:relative;
+    }
+    .expS2 {
+        font-family:"Raleway-SemiBold";
+        font-weight:normal;
+        position: absolute;
+        font-size:40px;
+        letter-spacing: 1px;
+        color:#616161;
+        text-align:left;
         float:right;
-        margin:330px 0 0 65px;
-        width:500px;
+        margin:35% 0 0 25%;
     }
-    .container {
-        margin-top:100px;
+    .exp2 {
+        font-family:"Raleway-Regular";
+        font-weight:normal;
+        letter-spacing: 1px;
+        color:#616161;
+        text-align:left;
+        float:left;
+        width:22.5%;
+        line-height:30px;
+        /* border:solid 1px yellow; */
+        margin:39% 0 0 25%;
+        position:absolute;
     }
+    #calc {
+        width:26%;
+        float:right;
+        margin:30% 26.5% 0 0;
+        position:absolute;
+    }
+    .fourth {
+        position: relative;
+        text-align: center;
+        color: white;
+        /* border:solid 1px red; */
+        background:#6B7A97;
+    }
+    #fb {
+        width:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* border:solid 1px red; */
+    }
+    .fbD {
+        /* border:solid 1px red; */
+        font-family:"Raleway-Regular";
+        font-weight:normal;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 1px;
+        width:15%;
+    }
+    .fbW {
+        /* border:solid 1px red; */
+        font-family:"Raleway-Bold";
+        font-weight:normal;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 1px;
+        font-size:60px;
+    }
+    .uL {
+        border:solid 0.5px white;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width:7%;
+        margin-top:1.5%;
+    }
+    footer {
+        background:#616161;
+        height:350px;
+        position:sticky;
+    }
+    #left2 {
+        margin:0 0 0 20%;
+        padding-top:4%;
+        width:20%;
+        height:350px; 
+        float:left; 
+        text-align:center;
+        color:white;
+    }
+    #right2 {
+        margin:0 20% 0 0;
+        padding-top:4%;
+        width:20%;
+        height:350px;
+        float:left;
+        color:white;
+        text-align:center;
+    }
+    #mid {
+        padding-top:6%;
+        width:20%;
+        height:150px;
+        float:left;
+        color:white;
+        text-align:center;
+    }
+    .info {
+        font-family:"Raleway-Regular";
+        font-weight:normal;
+        margin-top:30px;
+        border-right:solid 1px white;
+        letter-spacing:1px;
+        line-height:25px;
+    }
+    .tel {
+        font-family:"Raleway-Regular";
+        font-weight:normal;
+        letter-spacing:1px;
+        line-height:25px;
+    }
+    .add {
+        font-family:"Raleway-Regular";
+        font-weight:normal;
+        margin-top:30px;
+        border-left:solid 1px white;
+        letter-spacing:1px;
+        line-height:25px;
+    }
+    .T {
+        font-family:"Raleway-SemiBold";
+        font-weight:normal;
+        line-height:55px;
+        font-size:20px;
+    }
+    @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+        .second > #left, .second > main, .second > #right {
+            width: 100%;
+        }
+        #img {
+            width: fit-content; 
+            height: max-content; 
+            object-fit: none;
+            /* height:fit-content; */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header #logo {
+            float:left;
+            margin:18px 0 0 30px;
+            width:25%;
+        }
+        .top {
+            box-shadow:0px 5px 30px rgb(0 0 0 / 5%);
+            position:fixed;
+            top:0;
+            z-index:3;
+            width:100%;
+            background:linear-gradient(90deg, white 36%, #6B7A97 36%); 
+        }
+        .top #menu {
+            width: 300px;  
+            margin-top:15px;
+            height:50px;
+            margin-right:25px;
+        }
+        #menu {
+            width:980px;
+            padding:20px 0 0 0;
+        }
+        header #menu {
+            font-weight:550;
+            font-size:0.25em;
+        }
+        header #menu li {
+            display:inline;
+            margin-left: 30px; 
+        }
+        h1 {
+            font-size:2em;
+        }
+        p {
+            width:400px;
+            font-size:0.9em;
+        }
+        .part1 {
+            top: 38%;
+            left: 50%;
+        }
+        .part2 {
+            top: 48%;
+            left: 50%;
+        }
+        .part3 {
+            top: 56%;
+            left: 50%;
+        }
+        .second {
+            height:100px;
+            margin-bottom:1000px;
+        }
+        .third {
+            width:100%;
+            height:1450px;
+            background-color:#DCE2EC;
+            padding:5% 0 8% 0;
+        }
+        .expT {
+            font-size:2.75em;
+            font-weight:700;
+            letter-spacing: 1px;
+            color:#616161;
+            text-align: center;
+            line-height: 130px;;
+        }
+        .expS1 {
+            position: absolute;
+            font-size:2.5em;
+            font-weight:700;
+            letter-spacing: 1px;
+            color:#616161;
+            text-align:left;
+            float:left;
+            margin:50% 0 0 24.5%;
+        }
+        .exp1 {
+            letter-spacing: 1px;
+            color:#616161;
+            text-align:left;
+            float:right;
+            width:50%;
+            line-height:30px;
+            /* border:solid 1px yellow; */
+            margin:63% 0 0 24.5%;
+            position:absolute;
+        }
+        #js {
+            width:50%;
+            float:left;
+            margin:0 0 0 25%;
+            position:relative;
+        }
+        .expS2 {
+            position: absolute;
+            font-size:2.5em;
+            font-weight:700;
+            letter-spacing: 1px;
+            color:#616161;
+            text-align:left;
+            float:left;
+            margin:170% 0 0 24.5%;
+        }
+        .exp2 {
+            letter-spacing: 1px;
+            color:#616161;
+            text-align:left;
+            float:right;
+            width:50%;
+            line-height:30px;
+            /* border:solid 1px yellow; */
+            margin:183% 0 0 24.5%;
+            position:absolute;
+        }
+        #calc {
+            width:50%;
+            float:left;
+            margin:65% 0 0 21%;
+            position:relative;
+        }
+        .fbD {
+            position: absolute;
+            top: 22.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: 1px;
+            width:25%;
+            font-size:0.5em;
+        }
+        .fbW {
+            position: absolute;
+            top: 53.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: 1px;
+            font-size:1.75em;
+            font-weight:bold;
+        }
+        .uL {
+            border:solid 0.5px white;
+            position: absolute;
+            top: 26.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width:7%;
+            margin-top:1.5%;
+        }
+        footer {
+            height:350px;
+        }
+        #left2 {
+            margin:0 0 0 2%;
+            padding-top:10%;
+            width:30%;
+            height:350px; 
+            float:left; 
+            text-align:center;
+            color:white;
+        }
+        #right2 {
+            margin:0 2% 0 0;
+            padding-top:10%;
+            width:30%;
+            height:350px;
+            float:right;
+            color:white;
+            text-align:center;
+        }
+        #mid {
+            padding-top:16%;
+            width:30%;
+            height:150px;
+            float:left;
+            color:white;
+            text-align:center;
+            margin:0 0 0 3%;
+        }
+        .info {
+            margin-top:30px;
+            border-right:solid 1px white;
+            letter-spacing:1px;
+            line-height:25px;
+            font-size:0.5em;
+        }
+        .tel {
+            letter-spacing:1px;
+            line-height:25px;
+            font-size:0.5em;
+        }
+        .add {
+            margin-top:30px;
+            border-left:solid 1px white;
+            letter-spacing:1px;
+            line-height:25px;
+            font-size:0.5em;
+        }
+        .T {
+            font-weight:600;
+            line-height:55px;
+            font-size:1.5em;
+        }
+        .cred {
+            text-align: center;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: 1px;
+            color:white;
+            font-size:0.75em;
+        }
+        }
 </style>
 <body>
     <div class="top">
         <header>
             <a href="index.html"><img id="logo" src="logo.png"></a>
             <ul id="menu">
-                <li><a href="calc.html">IB GRADE CALCULATOR</a></li>
+                <li><a href="calc.html">CALCULATOR</a></li>
                 <li><a>CALENDAR</li></a>
-                <li><a>TASKS & DEADLINES</li></a>
+                <li><a>TASKS</li></a>
                 <li><a>PROFILE</li></a>
             </ul>
         </header>
     </div>
-    <div class="container">
-        <img id="img" src="background.png">
-        <div class="inner">
-            <div class="part1"><h1>IB GRADE CALCULATOR<br>FOR STUDENTS</h1></div>
-            <div class="part2"><p>Meet our unique features that allows IB students to manage their grades, assignments, and deadlines more efficiently. </p></div>
-            <div class="part3"><p id="btncontrol">Click the button below to get started!</p></div>
-            <div class="part4"><a href="calc.html"><button type="button" id="startBtn">GET STARTED</button></a></div>
+    <div class="first">
+        <img id="img" src="background1.png">
+        <div class="part1"><h1>IB GRADE CALCULATOR<br>FOR STUDENTS</h1></div>
+        <div class="part2"><p>Meet our unique features that allows IB students to manage their grades, assignments, and deadlines more efficiently. </p></div>
+        <div class="part3"><a href="calc.html"><button type="button" id="startBtn">GET STARTED</button></a></div>
+    </div>
+    <div class="second">
+        <aside id="left">
+            <img class="icon" src="book.png">
+            <div class="subT">
+                Our Story
+            </div>
+            <div class="cont">
+                ClassiQue is an educational tool created for IB students by IB students. We first came up with the idea to support us through our years in IB MYP as a Start Up project.
+            </div>
+        </aside>
+        <main>
+            <img class="icon" src="eye.png">
+            <div class="subT">
+                Our Vision
+            </div>
+            <div class="cont">
+                We aim to make grade calculations easier for IB students despite the complex rubrics and criterias. This is especially important as there were no other student-based tools made for IB students before ClassiQue.
+            </div>
+        </main>
+        <aside id="right">
+            <img class="icon" src="tech.png">
+            <div class="subT">
+                Technology
+            </div>
+            <div class="cont">
+                The program was made using basic HTML, CSS, and Javascript by a grade 9 student. It required lots of patience and knowledge of IB's grading standards to meet the expectations of the curriculum.
+            </div>
+        </aside>
+    </div>
+    <div class="third">
+        <div class="expT">
+            How it works
+        </div>
+        <img id="js" src="js.png">
+        <div class="expS1">
+            Program
+        </div>
+        <div class="exp1">
+            The calculator was programmed using using JavaScript. The program may seem basic and simple, but it took 700 lines of codes to make this product exist!
+        </div>
+        <img id="calc" src="calc.png">
+        <div class="expS2">
+            Calculation
+        </div>
+        <div class="exp2">
+            In order to provide more customization, we decided to allow users to only add one grade per criteria. This is because teachers have their own ways of finding the average for each strand and criterias, which isn't something that a program can predict. 
         </div>
     </div>
+    <div class="fourth">
+        <img id="fb" src="fb.png">
+        <div class="fbD">A Student from Grade 9</div>
+        <div class="uL"></div>
+        <div class="fbW">"Innovative tool for IB students"</div>
+    </div>
+    <footer>
+        <aside id="left2">
+            <div class="info">
+                <div class="T">Contact:</div>
+                sunhye_koo@nisc.edu.kh
+                max_wang@nisc.edu.kh
+            </div>
+        </aside>
+        <main id="mid">
+            <div class="tel">
+                <div class="T">Tel:</div>
+                123-456-7890<br><br><br><br><br>
+                © 2023 by ClassiQue
+            </div>
+        </main>
+        <aside id="right2">
+            <div class="add">
+                <div class="T">Address:</div>
+                Street 2004, Phnom Penh
+                <br>12102, Cambodia
+            </div>
+        </aside>
+    </footer>
 </body>
 </html>
