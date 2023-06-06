@@ -44,20 +44,20 @@
         font-weight:normal;
     }
     .container {
-        max-width: 1380px; 
+        max-width: 86.25vw; 
         margin: 0 auto;
-        padding: 0 70px 0 70px;
+        padding: 0 4.375vw 0 4.375vw;
         color:#626262;
+        margin-top:7.875vw;
     }
     .formContainer {
         margin-bottom: 1rem;
         color:#626262;
     }
     .rubContainer {
-        max-width: 1380px; 
+        max-width: 86.25vw; 
         margin: 0 auto;
-        padding-top:0px;
-        padding: 0 70px 0 70px;
+        padding: 0 4.375vw 0 4.375vw;
         color:#626262;
     }
     #gradeForm {
@@ -65,20 +65,20 @@
         display: flex; 
         flex-wrap: wrap; 
         justify-content: space-between;
-        font-size:12px;
+        font-size:0.75vw;
         /* border: solid 1px black; */
         color:#626262;
         font-weight:normal;
-        letter-spacing:1px;
+        letter-spacing:0.063vw;
     }
     #gradeForm > div { 
         vertical-align: middle; 
-        font-size:12px;
-        letter-spacing:1px;
+        font-size:0.75vw;
+        letter-spacing:0.063vw;
         /* border: solid 1px black; */
     }
     input {
-        height: 1.5rem;
+        height: 1.5vw;
         border-radius:0px;
         border-width:1px;
         border:solid 1px #ddd;
@@ -86,12 +86,15 @@
         border-left:solid 1px white;
         border-right:solid 1px white;
     }
+    input[type="text"] {
+            font-size:1vw;
+        }
     table {
         display: table; 
         width: 100%; 
         max-width: 100%; 
-        font-size:12px;
-        letter-spacing:1px;
+        font-size:0.75vw;
+        letter-spacing:0.063vw;
         border-collapse:collapse;
     }
     table > thead > tr > th {
@@ -104,13 +107,13 @@
         color:#626262;
     }
     .btn { 
-        width: 60px; 
+        width: 3.75vw; 
         font-family:"Raleway-Regular";
         font-weight:normal;
-        font-size:8px;
-        letter-spacing:2px;
+        font-size:0.5vw;
+        letter-spacing:0.125vw;
         border-radius:0px;
-        height:25px;
+        height:1.563vw;
         background:#6b7a98;
         color:white;
         border:solid 1px #6b7a98;
@@ -122,19 +125,20 @@
         transition: 0.4s ease-in-out;
     }
     #subAddBtn {
-        margin-right:10px;
+        margin-right:0.625vw;
     }
     .btn-sm {
         width: 5rem;
+        border:solid 1px #6b7a98;
     }
     .btn-xs {
-        width: 60px; 
+        width: 3.75vw; 
         font-family:"Raleway-Regular";
         font-weight:normal;
-        font-size:8px;
-        letter-spacing:2px;
+        font-size:0.5vw;
+        letter-spacing:0.125vw;
         border-radius:0px;
-        height:25px;
+        height:1.563vw;
         background:#6b7a98;
         color:white;
         border:solid 1px #6b7a98;
@@ -145,42 +149,42 @@
         transition: 0.4s ease-in-out;
     }
     .input-md {
-        margin-right:10px;
-        width:110px;
+        margin-right:0.625vw;
+        width:6.875vw;
     }
     .input-ca {
-        width: 65px;
-        margin-right:10px;
+        width: 4.063vw;
+        margin-right:0.625vw;
     }
     .input-cb {
-        width: 65px;
-        margin-right:10px;
+        width: 4.063vw;
+        margin-right:0.625vw;
     }
     .input-cc {
-        width: 65px;
-        margin-right:10px;
+        width: 4.063vw;
+        margin-right:0.625vw;
     }
     .input-cd {
-        width: 65px;
-        margin-right:10px;
+        width: 4.063vw;
+        margin-right:0.625vw;
     }
     .input-lg {
-        width: 110px;
-        margin-right:10px;
+        width: 6.875vw;
+        margin-right:0.625vw;
     }
     .hiddenBtn {
         display: none;
     }
     #subUpdateBtn {
-        width:60px; 
+        width:3.75vw; 
         font-family:"Raleway-Regular";
         font-weight:normal;
-        font-size:8px;
-        margin-right:10px;
-        letter-spacing:2px;
+        font-size:0.5vw;
+        margin-right:0.625vw;
+        letter-spacing:0.125vw;
         border-radius:0px;
         border-width: 1px;
-        height:25px;
+        height:1.563vw;
         background:#6b7a98;
         color:white;
     }
@@ -190,15 +194,15 @@
         transition: 0.4s ease-in-out;
     }
     #updateCancleBtn {
-        width:60px; 
+        width:3.75vw; 
         font-family:"Raleway-Regular";
         font-weight:normal;
-        font-size:8px;
-        margin-right:10px;
-        letter-spacing:2px;
+        font-size:0.5vw;
+        margin-right:0.625vw;
+        letter-spacing:0.125vw;
         border-radius:0px;
         border-width: 1px;
-        height:25px;
+        height:1.563vw;
         background:#6b7a98;
         color:white;
     }
@@ -214,55 +218,45 @@
         text-align:right;
     }
     .top {
-        height: 80px;
+        height: 5vw;
         /* border:solid 1px red; */
         box-shadow:0px 5px 30px rgb(0 0 0 / 5%);
+        position:fixed;
+        top:0;
+        z-index:3;
         width:100%;
         background:linear-gradient(90deg, white 18%, #6B7A97 18%); 
     }
     .top #menu {
         float: right;
-        width: 800px;  
-        margin-top:15px;
-        height:50px;
+        width: 45%;  
+        margin-top:1%;
+        height:3.125vw;
         /* border:solid 1px blue;  */
     }
     #menu {
-        width:980px;
-        padding:15px 0 0 0;
+        padding:1% 0 0 0;
     }
     header #logo {
         /* border:solid 1px blue; */
         float:left;
-        margin:10px 0 0 55px;
-        width:150px;
+        margin:0.7% 0 0 3.8%;
+        width:10.5%;
     }
     header #menu {
         font-family:"Raleway-SemiBold";
         font-weight:normal;
-        font-size:12px;
+        font-size:0.8vw;
     }
     header #menu li {
         display:inline;
-        margin-left: 80px; 
+        margin-left: 13%; 
+        /* border:solid 1px blue;  */
     }
     a {
         text-decoration:none;  
         color:white;
         position: relative;
-        padding-bottom:10px;
-    }
-    a::after {
-        content: '';
-        position:absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 1px;
-        bottom: 0;
-        left: 0;
-        background-color: black;
-        transform-origin: bottom left right;
-        transition: 0.8s ease-in-out;
     }
     a:hover {
         color:#DCE2EC;
@@ -272,68 +266,70 @@
         float: right;
     }
     tr {
-        height: 50px;
+        height: 3.125vw;
         color:#626262;
     }
     #noData {
-        height:400px;
+        height:25vw;
     }
     .formText {
         /* border: solid 1px red; */
-        padding-right:10px;
+        padding-right:0.625vw;
     }
     #critRub {
-        width:1300px;
-        margin-bottom:100px;
+        width:81.25vw;
+        margin-bottom:6.25vw;
     }
     #des {
-        width:800px;
+        width:50vw;
     }
     .line {
-        padding:10px 0 10px 0;
-        margin:10px 0 10px 0;
+        padding:0.625vw 0 0.625vw 0;
+        margin:0.625vw 0 0.625vw 0;
     }
     h3 {
+        font-size:1.4vw;
         font-weight:normal;
         font-family:"Raleway-SemiBold";
-        letter-spacing:2px;
+        letter-spacing:0.125vw;
         color:#626262;
-        padding:30px 0 20px 0;
+        padding:0 0 1.25vw 0;
     }
     thead > tr > th {
         font-family:"Raleway-Medium";
         font-weight:normal;
-        font-size: 13px;
+        font-size: 0.813vw;
         color:#626262;
-        letter-spacing:1px;
+        letter-spacing:0.063vw;
     }
     footer {
         background:#616161;
-        height:350px;
+        height:20.625vw;
         position:sticky;
     }
     #left2 {
-        margin:0 0 0 20%;
-        padding-top:4%;
-        width:20%;
-        height:350px; 
+        margin:0 0 0 4.5%;
+        padding-top:1.25vw;
+        width:30%;
+        height:20.625vw;
         float:left; 
         text-align:center;
         color:white;
     }
     #right2 {
-        margin:0 20% 0 0;
-        padding-top:4%;
-        width:20%;
-        height:350px;
+        margin:0 2% 0 0;
+        padding-top:1.25vw;
+        width:30%;
+        height:20.625vw;
         float:left;
         color:white;
         text-align:center;
     }
     #mid {
-        padding-top:6%;
-        width:20%;
-        height:150px;
+        margin:0 2% 0 0;
+        padding-top:1.25vw;
+        width:30%;
+        height:20.625vw;
         float:left;
         color:white;
         text-align:center;
@@ -344,13 +340,17 @@
         margin-top:30px;
         border-right:solid 1px white;
         letter-spacing:1px;
-        line-height:25px;
+        line-height:1.563vw;
+        font-size:1.25vw;
+        height:7vw;
     }
     .tel {
         font-family:"Raleway-Regular";
         font-weight:normal;
+        margin-top:30px;
         letter-spacing:1px;
-        line-height:25px;
+        line-height:1.563vw;
+        font-size:1.25vw;
     }
     .add {
         font-family:"Raleway-Regular";
@@ -358,24 +358,191 @@
         margin-top:30px;
         border-left:solid 1px white;
         letter-spacing:1px;
-        line-height:25px;
+        line-height:1.563vw;
+        font-size:1.25vw;
+        height:7vw;
     }
     .T {
         font-family:"Raleway-SemiBold";
         font-weight:normal;
-        line-height:55px;
-        font-size:20px;
+        line-height:3.438vw;
+        font-size:1.25vw;
+    }
+    .cred {
+        font-family:"Raleway-Regular";
+        font-weight:normal;
+        text-align: center;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 1px;
+        color:white;
+        font-size:1.25vw;
+    }
+    @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+        .top {
+            height: 20vw;
+            background:linear-gradient(90deg, white 30%, #6B7A97 30%); 
+        }
+        .top #menu {
+            float: right;
+            margin-top:8%;
+            width: 65%;  
+        }
+        header #logo {
+            margin:6% 0 0 3.8%;
+            width:22.5%;
+        }
+        header #menu {
+            font-size:2vw;
+        }
+        header #menu li {
+            margin-left: 7%; 
+        }
+        .container {
+            margin-top:25vw ;
+            width:100%; 
+        }
+        .rubContainer {
+            max-width: 100%; 
+            padding: 0 4.375vw 0 9vw;
+        }
+        #gradeForm > div { 
+            font-size:1vw;
+            letter-spacing:0.025vw
+        }
+        input {
+            height: 2vw;
+        }
+        input[type="text"] {
+            font-size:1vw;
+        }
+        table {
+            display: table; 
+            width: 100%; 
+            max-width: 100%; 
+            font-size:1.125vw;
+            letter-spacing:0.063vw;
+            border-collapse:collapse;
+        }
+        #subAddBtn {
+            margin-right:0.15vw;
+        }
+        .input-md {
+            margin-right:0.15vw;
+            width:6.875vw;
+        }
+        .input-ca {
+            width: 4.063vw;
+            margin-right:0.15vw;
+        }
+        .input-cb {
+            width: 4.063vw;
+            margin-right:0.15vw;
+        }
+        .input-cc {
+            width: 4.063vw;
+            margin-right:0.15vw;
+        }
+        .input-cd {
+            width: 4.063vw;
+            margin-right:0.15vw;
+        }
+        .input-lg {
+            width: 6.875vw;
+            margin-right:0.15vw;
+        }
+        tr {
+            height: 10.125vw;
+        }
+        #noData {
+            height:85vw;
+            font-size:2vw;
+        }
+        .formText {
+            /* border: solid 1px red; */
+            padding-right:0.625vw;
+        }
+        h3 {
+            font-size:2.5vw;
+            padding:0 0 1.25vw 0;
+        }
+        thead > tr > th {
+            font-family:"Raleway-Medium";
+            font-weight:normal;
+            font-size: 1.25vw;
+            color:#626262;
+            letter-spacing:0.063vw;
+        }
+        #left2 {
+            margin:0 0 0 4.5%;
+            width:30%;
+            float:left; 
+            text-align:center;
+            color:white;
+        }
+        #right2 {
+            margin:0 2% 0 0;
+            width:30%;
+            float:left;
+            color:white;
+            text-align:center;
+        }
+        #mid {
+            margin:0 2% 0 0;
+            width:30%;
+            float:left;
+            color:white;
+            text-align:center;
+        }
+        .info {
+            margin-top:15px;
+            border-right:solid 1px white;
+            letter-spacing:1px;
+            line-height:1.563vw;
+            font-size:1.25vw;
+            height:7vw;
+        }
+        .tel {
+            margin-top:15px;
+            letter-spacing:1px;
+            line-height:1.563vw;
+            font-size:1.25vw;
+        }
+        .add {
+            margin-top:15px;
+            border-left:solid 1px white;
+            letter-spacing:1px;
+            line-height:1.563vw;
+            font-size:1.25vw;
+        }
+        .T {
+            line-height:3.438vw;
+            font-size:1.25vw;
+        }
+        .cred {
+            text-align: center;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: 1px;
+            color:white;
+            font-size:1.25vw;
+        }
     }
 </style>
 <body>
     <div class="top">
         <header>
-            <a href="index.html"><img id="logo" src="logo.png"></a>
+            <a href="index2.html"><img id="logo" src="logo.png"></a>
             <ul id="menu">
-                <li><a href="calc.html">IB GRADE CALCULATOR</a></li>
-                <li><a>CALENDAR</a></li>
-                <li><a>TASKS & DEADLINES</a></li>
-                <li><a>PROFILE</a></li>
+                <li><a href="calc2.html">CALCULATOR</a></li>
+                <li><a>CALENDAR</li></a>
+                <li><a>TASKS</li></a>
+                <li><a>PROFILE</li></a>
             </ul>
         </header>
     </div>
@@ -518,8 +685,7 @@
         <main id="mid">
             <div class="tel">
                 <div class="T">Tel:</div>
-                123-456-7890<br><br><br><br><br>
-                © 2023 by ClassiQue
+                123-456-7890
             </div>
         </main>
         <aside id="right2">
@@ -529,6 +695,7 @@
                 <br>12102, Cambodia
             </div>
         </aside>
+        <div class="cred">© 2023 by ClassiQue</div>
     </footer>
 </body>
 <script>
